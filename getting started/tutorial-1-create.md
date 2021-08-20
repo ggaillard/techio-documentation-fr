@@ -1,58 +1,59 @@
 # Introduction
 
-The goal of this tutorial is to demonstrate how to build a basic playground on Tech.io.
+Le but de ce tutoriel est de montrer comment construire un terrain de jeu basique sur Tech.io.
 
-## Prerequisites
+## Conditions préalables
 
-You only need:
-- Git installed on your computer.
-- Basic knowledge about Git (clone, push)
+Tu a juste besoins :
+- Git installé sur votre ordinateur.
+- Connaissances de base sur Git (clone, push)
 
-The source code of this documentation is on GitHub ([Documentation GitHub repository](https://github.com/TechDotIO/techio-documentation), feel free to come up with proposals to improve it!)
+Le code source de cette documentation est sur GitHub  ([Documentation GitHub repository](https://github.com/TechDotIO/techio-documentation), n'hésitez pas à faire des propositions pour l'améliorer !)
 
-## What's a Playground?
+##Qu'est-ce qu'une aire de jeux - What's a Playground?
 
-A playground can take many forms:
-- General article explaining a concept (ex: [Genetic Algorithms](https://tech.io/playgrounds/334/genetic-algorithms), [Graph Theory Basics](https://tech.io/playgrounds/5470/graph-theory-basics-engesp))
-- List of advanced features of a language (ex: [Advanced Python Features](https://tech.io/playgrounds/500/advanced-python-features), [7 Features of C++ 17 that will Simplify your Code](https://tech.io/playgrounds/2205/7-features-of-c17-that-will-simplify-your-code))
-- Technology showcase (ex: [Reactive Programming with Reactor 3](https://tech.io/playgrounds/929/reactive-programming-with-reactor-3))
-- In-depth Course on a specific topic ([Using C# LINQ - A Practical Overview](https://tech.io/playgrounds/213/using-c-linq---a-practical-overview))
-- Quick how-to ([How to iterate (loop) over the elements in a map in Java 8](https://tech.io/playgrounds/5048/how-to-iterate-loop-over-the-elements-in-a-map-in-java-8))
+Une aire de jeux peut prendre plusieurs formes:
+
+- Article général expliquant un concept (ex: [Genetic Algorithms](https://tech.io/playgrounds/334/genetic-algorithms), [Graph Theory Basics](https://tech.io/playgrounds/5470/graph-theory-basics-engesp))
+- Liste des fonctionnalités avancées d'un langage (ex: [Advanced Python Features](https://tech.io/playgrounds/500/advanced-python-features), [7 Features of C++ 17 that will Simplify your Code](https://tech.io/playgrounds/2205/7-features-of-c17-that-will-simplify-your-code))
+- Mise en avant d'une technologie (ex: [Reactive Programming with Reactor 3](https://tech.io/playgrounds/929/reactive-programming-with-reactor-3))
+- Cours approfondi sur un sujet spécifique ([Using C# LINQ - A Practical Overview](https://tech.io/playgrounds/213/using-c-linq---a-practical-overview))
+- De mode d'emploi ([How to iterate (loop) over the elements in a map in Java 8](https://tech.io/playgrounds/5048/how-to-iterate-loop-over-the-elements-in-a-map-in-java-8))
 ...
 
-Most of the playgrounds contain runnable code samples, but it's not mandatory. At the end of the day, you can craft what you want.
+La plupart des terrains de jeux contiennent des exemples de code exécutables, mais ce n'est pas obligatoire. 
 
-# Creating Your Own Playground
+# Créer votre propre *Playground*
 
-Head to the [Create a playground](/new-playground) page. 
+ Vous devez d'abord choisir un modèle pour créer un nouveau terrain de jeu[Create a playground](/new-playground). 
 
-## Templates
+## Modèles *Templates*
 
-There, you can choose a template from a large selection of technologies. There are two types of templates:
-- A "simple" template with limited code sample options but which enables you to quickly get started *(recommended for a first playground)*.
-- A more advanced template with many options -dependencies, unit tests, visual renderer...- like a real project.
+Là, vous pouvez choisir un modèle parmi une large sélection de technologies. Il existe deux types de modèles :
+- Un modèle "simple" avec des options d'exemple de code limitées mais qui permet de se lancer rapidement *(recommandé pour un premier terrain de jeu)*.
+- Un modèle plus avancé avec de nombreuses options -dépendances, tests unitaires, rendu visuel...- comme un vrai projet.
 
-All templates contain a working code example and some hints to help you getting started.
+Tous les modèles contiennent un exemple de code fonctionnel et quelques conseils pour vous aider à démarrer.
 
-You can also choose to create an empty playground from scratch.
+Vous pouvez également choisir de créer un terrain de jeu vide à partir de zéro.
 
-## Repository
+## Dépôt *Repository*
 
-A skeleton playground based on the selected template is created in a new git repository.
+Un squelette de terrain de jeu basé sur le modèle sélectionné est créé dans un nouveau référentiel git.
 
-There are two options for choosing the repository:
-- On your own Github repository. For this, we need your authorization *(We will not perform any action without your approval. You can revoke the access from your GitHub settings at any time)*. This will allow a better collaboration with the community as they will be able to fork your playground and propose improvements and translations. *(recommended)*
-- On our private Tech.io repository. For this, you need to be authenticated on Tech.io’s Git platform. 
+Il existe deux options pour choisir le référentiel :
+- Sur votre propre référentiel Github. Pour cela, nous avons besoin de votre autorisation *(Nous n'effectuerons aucune action sans votre approbation. Vous pouvez révoquer l'accès depuis vos paramètres GitHub à tout moment)*. Cela permettra une meilleure collaboration avec la communauté car elle pourra creuser votre terrain de jeu et proposer des améliorations et des traductions. *(conseillé)*
+- Sur notre référentiel privé Tech.io. Pour cela, vous devez être authentifié sur la plateforme Git de Tech.io. 
 
-::: Authenticating on Tech.io's Git platform
+::: Authentification sur la plateforme Git de Tech.io
 
 To do so, you need to add a SSH key to your profile.
 
-If you don’t already have an SSH key, execute `ssh-keygen` in your terminal. This command creates a public and a private key used to access your repository. (Check out [GitHub Help for more information](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)).
+Si vous n'avez pas encore de clé SSH, exécutez-la `ssh-keygen` dans ton terminal. Cette commande crée une clé publique et une clé privée utilisées pour accéder à votre référentiel. (Consultez l'[aide de GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) pour plus d'informations).
 
-By default, the public key is located in `~/.ssh/id_rsa.pub`. Copy your public key to [your settings page](/settings/ssh).
+Par défaut, la clé publique se trouve dans  `~/.ssh/id_rsa.pub`. Copiez votre clé publique dans votre [page de paramètres](/settings/ssh).
 
-Now that your key has been added, you can clone your repository using the origin URL provided on the playground page:
+Maintenant que votre clé a été ajoutée, vous pouvez cloner votre référentiel en utilisant l'URL d'origine fournie sur la page du terrain de jeu :
 
 ```bash
   git clone git@ssh.git.tech.io:cg123456/playground-hash.git
@@ -60,43 +61,43 @@ Now that your key has been added, you can clone your repository using the origin
 
 :::
 
-# Structure of Your Playground
-Now that you have created the repository, let's take a look at the folder structure:
-- `techio.yml`: This mandatory file describes the structure of your playground. It must be present at the root of the playground’s git repository. It contains: the table of content of the playground, the references to the lesson files, and some other technical details for advanced usage (see [techio.yml reference](/reference/reference-techioyml.md)).
-- `cover.png`: This small image (140x76) along your playground in the [explore page](https://tech.io/explore). By default, it's the logo of the technology you chose.
-- `markdowns` folder or `statement.md` file: Each markdown file corresponds to a page. A one-page playground will just contain the `statement.md` file at the root. Else, all files will be contained in the `markdowns` folder.
-*Markdown is a simple syntax for basic formatting (links, images, quote text, code formatted text snippets, etc). You can find a cheatsheet for markdown [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).*
-- `project` folder or nothing: This folder contains the files used in your coding exercies. We'll describe it later in the [Add a coding exercise](/getting%20started/tutorial-3-coding-exercise.md) section of the documentation. In a simple template, this folder is absent, because samples of codes are added directly in the markdown using [Code Snippets](/markdown/markdown-snippet.md).
+# Structure de votre terrain de jeu
+Maintenant que vous avez créé le référentiel, examinons la structure des dossiers :
+- `techio.yml`: Ce fichier obligatoire décrit la structure de votre aire de jeux. Il doit être présent à la racine du dépôt git du terrain de jeu. Il contient : la table des matières du terrain de jeu, les références aux fichiers de cours, et quelques autres détails techniques pour une utilisation avancée (voir l'exemple [techio.yml](/reference/reference-techioyml.md)).
+- `cover.png`: Cette petite image (140x76) le long de votre terrain de jeu dans la [page d'exploitatoin](https://tech.io/explore). Par défaut, c'est le logo de la technologie que vous avez choisie.
+- Le dossier `markdowns` ou le fichier `statement.md`: Chaque fichier de démarque correspond à une page. Un terrain de jeu d'une page ne contiendra que le fichier `statement.md`à la racine. Sinon, tous les fichiers seront contenus dans le dossier`markdowns` .
+*Markdown est une syntaxe simple pour le formatage de base (liens, images, texte de citation, extraits de texte au format de code, etc.). Vous pouvez trouver une aide-mémoire pour la démarque [ici](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).*
+- Le dossier `project` ou rien: ce dossier contient les fichiers utilisés dans vos exercices de codage. Nous le décrirons plus tard dans la section [Ajouter un exercice de codage](/getting%20started/tutorial-3-coding-exercise.md) de la documentation.  Dans un modèle simple, ce dossier est absent, car des échantillons de codes sont ajoutés directement dans le démarque à l'aide d'[extraits de code](/markdown/markdown-snippet.md).
 
-# Updating Your Playground
+# Mettre à jour votre terrain de jeu *Playground*
 
-## Changing the Title and Writing an Introduction
+## Changer le titre et rédiger une introduction
 
-In the `tech.io.yml`file, update the title:
+Dans le fichier `tech.io.yml`, mettre à jour le titre:
 
 ```yml
-title: Put your playground title here
+title: Mettez votre titre de terrain de jeu ici
 plan:
-  - title: Welcome
+  - title: Bienvenue
     statement: markdowns/welcome.md
 ```
-Then, in your markdown (either in `statement.md` or `markdowns/welcome.md`), write an introduction:
+Ensuite, soit dans votre fichier markdown `statement.md` ou votre répertoire `markdowns/welcome.md`, écrivez une introduction:
 
 ```markdown
 # Hello world,
 
-Welcome to this playground about this amazing technology. I'll show you ...
+Bienvenue sur ce terrain de jeu sur cette technologie étonnante. je vais te montrer comment utiliser le langage de balisage Markdown ...
 ```
 
-## Adding a New Page
-If you want to add a new lesson, follow these steps:
+## Ajout d'une nouvelle page
+Si vous souhaitez ajouter une nouvelle leçon, procédez comme suit ::
 
-- Create a markdown file: `markdowns/part2.md`
-- Edit this markdown and add some content
-- Reference this markdown in `techio.yml`:
+- Créer un fichier markdown : `markdowns/part2.md`
+- Modifiez votre fichier markdown et ajouter du contenu
+- Référencez ce nouveau fichier dans `techio.yml`:
 
 ```yml
-title: Put your playground title here
+title: Mettez votre titre de terrain de jeu ici
 plan:
   - title: Part 1
     statement: markdowns/welcome.md
@@ -104,34 +105,33 @@ plan:
     statement: markdowns/part2.md
 ```
 
-## Deploying the Changes on Tech.io
+## Déploiement des modifications sur Tech.io
 
-Committing and pushing a change to `master` will automatically trigger a build of the playground and update it on Tech.io.  Use the following git commands:
+Valider et pousser un changement dans votre branche `master` déclenchera automatiquement une construction du terrain de jeu et le mettra à jour sur Tech.io. Utilisez les commandes git suivantes :
 
 ```bash
-git commit -a -m "Title and introduction"
+git commit -a -m "Titre et introduction"
 git push origin master
 ```
 
-Come back to your playground page on Tech.io. It should have refreshed. Click "Preview" to play with your playground.
+Revenez à votre page de jeux sur Tech.io. Il aurait dû se rafraîchir. Cliquez sur "Aperçu" pour jouer avec votre terrain de jeu.
 
 
-# Sharing Your Playground
+# Partager votre terrain de jeu
 
-## Sharing a Preview Link
+## Partage d'un lien d'aperçu
 
-Even if your playground is not published, you can share its preview link which looks like this:
+Même si votre terrain de jeu n'est pas publié, vous pouvez partager son lien d'aperçu qui ressemble à ceci :
 
 https://tech.io/playgrounds/super_long_id/title_of_the_playground
 
-Each time you push changes to your playground, the super_long_id is updated.
+Chaque fois que vous envoyez des modifications à votre terrain de jeu, la référence *super_long_id* est mis à jour.
+## Publication de votre terrain de jeu
 
-## Publishing Your Playground
+Un terrain de jeu publié est visible dans la [page ](https://tech.io/explore/latest) qui référence les derniers ajouts . *Pour maintenir la qualité des aires de jeux affichées, nous vous recommandons de ne pas publier votre aire de jeux de test.*
 
-A published playground is visible in the [Latest Playgrounds page](https://tech.io/explore/latest). *To maintain the quality of displayed playgrounds, we recommend you not to publish your test playground.*
+Une fois qu'un terrain de jeu est publié, la référence *super_long_id* devient *short_id* qui rend l'url beaucoup plus conviviale.
 
-Once a playground is published, the super_long_id becomes a short_id which makes the url much more friendly.
+## Mises à jour
 
-## Future Updates
-
-Once a playground is published and available to the community, you can freely update it with improvements and use the preview to see the results impacting readers. Once you're satisfied with it, you can publish the new version, and the users will see the changes.
+Une fois qu'un terrain de jeu est publié et disponible pour la communauté, vous pouvez le mettre à jour librement avec des améliorations et utiliser l'aperçu pour voir les résultats impactant les lecteurs. Une fois que vous en êtes satisfait, vous pouvez publier la nouvelle version et les utilisateurs verront les changements.
